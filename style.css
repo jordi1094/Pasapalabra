@@ -1,0 +1,106 @@
+body{
+    background-color: #1494ec;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: white;
+}
+
+.rosco{
+    height: 90vh;
+    width: 90vh;
+    margin: auto;
+    border: 1px solid;
+}
+.letra{
+    position: absolute;
+    top: 40vh;
+    left: 50%;
+    height: 2.5vh;
+    width: 2.5vh;
+    border: 0.2vh solid white;
+    border-radius: 2vh;
+    text-align: center;
+    font-size: 2vh;
+}
+.letra:nth-child(1){
+    transform: rotate(0) translate(20vh) rotate(0);
+}
+.letra:nth-child(2){
+    transform: rotate(14) translate(30vh)  rotate(-14deg);
+}
+
+.letra:nth-child(3){
+    transform: rotate(28deg) translate(20vh) rotate(-28deg);
+}
+
+.letra:nth-child(4){
+    transform: rotate(42deg) translate(20vh) rotate(-42deg);
+}
+.letra:nth-child(5){
+    transform: rotate(52.22deg) translate(20vh) rotate(-55deg);
+}
+.letra:nth-child(6){
+    transform: rotate(65.55deg) translate(20vh) rotate(-65.55deg);
+}
+.letra:nth-child(7){
+    transform: rotate(78.88deg) translate(20vh) rotate(-78.88deg);
+}
+.letra:nth-child(8){
+    transform: rotate(91.11deg) translate(20vh) rotate(-91.11deg);
+}
+.letra:nth-child(9){
+    transform: rotate(104.44deg) translate(20vh) rotate(-104.44deg);
+}
+.letra:nth-child(10){
+    transform: rotate(117.77deg) translate(20vh) rotate(-117.77deg);
+}
+.letra:nth-child(11){
+    transform: rotate(130deg) translate(20vh) rotate(-130deg);
+}
+.letra:nth-child(12){
+    transform: rotate(143.33deg) translate(20vh) rotate(-143.33deg);
+}
+.letra:nth-child(13){
+    transform: rotate(156.66deg) translate(20vh) rotate(-156.66deg);
+}
+.letra:nth-child(14){
+    transform: rotate(169.99deg) translate(20vh) rotate(-169.99deg);
+}
+.letra:nth-child(15){
+    transform: rotate(182.22deg) translate(20vh) rotate(-182.22deg);
+}
+.letra:nth-child(16){
+    transform: rotate(195.55deg) translate(20vh) rotate(-195.55deg);
+}
+.letra:nth-child(17){
+    transform: rotate(208.88deg) translate(20vh) rotate(-208.88deg);
+}
+.letra:nth-child(18){
+    transform: rotate(221.11deg) translate(20vh) rotate(-221.11deg);
+}
+.letra:nth-child(19){
+    transform: rotate(234.44deg) translate(20vh) rotate(-234.44deg);
+}
+.letra:nth-child(20){
+    transform: rotate(247.77deg) translate(20vh) rotate(-247.77deg);
+}
+.letra:nth-child(21){
+    transform: rotate(260deg) translate(20vh) rotate(-260deg);
+}
+.letra:nth-child(22){
+    transform: rotate(273.33deg) translate(20vh) rotate(-273.33deg);
+}
+.letra:nth-child(23){
+    transform: rotate(286.66deg) translate(20vh) rotate(-286.66deg);
+}
+.letra:nth-child(24){
+    transform: rotate(299.99deg) translate(20vh) rotate(-299.99deg);
+}
+.letra:nth-child(25){
+    transform: rotate(312.22deg) translate(20vh) rotate(-312.22deg);
+}
+.letra:nth-child(26){
+    transform: rotate(325.55deg) translate(20vh) rotate(-325.55deg);
+}
+.letra:nth-child(27){
+    transform: rotate(338.88deg) translate(20vh) rotate(-338.88deg);
+}
