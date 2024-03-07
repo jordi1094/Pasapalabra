@@ -28,7 +28,7 @@ h1{
 }
 .text{
     position: absolute;
-    top: calc((100vh - 2.5vw) / 2);
+    bottom: 55vh;
     width: 30vw;
     height: 2.5vw;
     font-size: 2vw;
@@ -40,6 +40,8 @@ h1{
     border-radius: 7px;
     margin: auto;
     width: 29vw;
+    height: 15vh;
+    
 }
 #respuesta {
     border: 2px solid whitesmoke;
