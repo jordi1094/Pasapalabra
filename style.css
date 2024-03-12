@@ -40,7 +40,7 @@ h1{
     border: 2px solid whitesmoke;
     border-radius: 7px;
     margin: auto;
-    width: 31vw;
+    width: 30.3vw;
     height: 17vh;
     
 }
@@ -50,15 +50,20 @@ h1{
     margin: 3px auto ;
     margin-bottom: 0px;
     background: none;
-    width:31vw;
-    font-size: 2vw;
+    width:30vw;
+    font-size: 2.5vh;
+    padding-top: 0.5%;
+    color: white;
 }
 #respuesta::placeholder{
     opacity:80%;
-    color: whitesmoke;
+    color: white;
+    padding-top: 0.5%;
     font-size: 2.5vh;
+    
 }
 #enviar{
+    margin-top: 2%;
     background-color: #1494ec;
     border: 2px solid white;
     color: white;
