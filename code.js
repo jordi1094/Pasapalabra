@@ -21,7 +21,7 @@ let preguntas = [
     },
     {
         "letra": "E",
-        "pregunta": "ON LA E: Nombre del rey visigodo que gobernó entre los años 687 y 702, y limitó la actividad económica de los judíos",
+        "pregunta": "CON LA E: Nombre del rey visigodo que gobernó entre los años 687 y 702, y limitó la actividad económica de los judíos",
         "respuesta": "ÉGICA"
     },
     {
@@ -138,6 +138,38 @@ let preguntas = [
 let letras = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","Ñ","O","P","Q","R","S","T","U","V","W","X","Y","Z"];
 let preguntaActual = "";
 let respuestaActual = "";
-for ( i = 0; i<= letras.length; i = i++){
+let contador = 0;
+let displayPregunta = document.getElementsByClassName("pregunta")[0];
+let displayRespuesta = document.getElementById("respuesta");
+let botonStart = document.getElementById("start");
+let botonResponder = document.getElementById("enviar");
+preguntaActual = preguntas[0].pregunta
+displayPregunta.innerHTML = preguntaActual
 
-};
+
+
+
+botonResponder.addEventListener('click',() =>{ responder()})
+window.addEventListener('keydown',(e) =>{
+    if (e.keycode === 13){
+        responder()
+    }
+})
+
+
+function responder(){
+    respuestaActual = displayRespuesta.value
+    if(respuestaActual.toUpperCase() === preguntas[contador].respuesta){
+    let circuloLetra = document.getElementById(letras[contador]);
+    circuloLetra.style.backgroundColor = "green"
+    contador = contador+1
+    preguntaActual = preguntas[contador].pregunta;
+    displayPregunta.innerHTML = preguntaActual
+    }else{
+        let circuloLetra = document.getElementById(letras[contador]);
+    circuloLetra.style.backgroundColor = "red"
+    contador = contador+1
+    preguntaActual = preguntas[contador].pregunta;
+    displayPregunta.innerHTML = preguntaActual
+    }
+}

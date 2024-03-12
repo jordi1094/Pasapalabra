@@ -25,6 +25,7 @@ h1{
     border-radius: 2vh;
     text-align: center;
     font-size: 2.5vh;
+    background-color: #42b0f9;
 }
 .text{
     position: absolute;
@@ -39,8 +40,8 @@ h1{
     border: 2px solid whitesmoke;
     border-radius: 7px;
     margin: auto;
-    width: 29vw;
-    height: 15vh;
+    width: 31vw;
+    height: 17vh;
     
 }
 #respuesta {
@@ -49,7 +50,7 @@ h1{
     margin: 3px auto ;
     margin-bottom: 0px;
     background: none;
-    width:29vw;
+    width:31vw;
     font-size: 2vw;
 }
 #respuesta::placeholder{
@@ -58,12 +59,16 @@ h1{
     font-size: 2.5vh;
 }
 #enviar{
-    background-color: #0f64d8;
+    background-color: #1494ec;
     border: 2px solid white;
     color: white;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     border-radius: 7px;
 
+}
+
+#enviar:active{
+  transform: scale(97%);
 }
 
 .letra:nth-child(1) {
