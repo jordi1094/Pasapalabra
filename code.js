@@ -8,7 +8,8 @@ let preguntas = [
     {
         "letra": "B",
         "pregunta": "CON LA B: Apertura delantera de un pantalón",
-        "respuesta": "BRAGUETA"
+        "respuesta": "BRAGUETA",
+        "solucion": "undefined"
     },
     {
         "letra": "C",
@@ -161,44 +162,68 @@ let preguntas = [
         "solucion": "undefined"
     }
 ];
-let letras = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","Ñ","O","P","Q","R","S","T","U","V","W","X","Y","Z"];
+let letras= ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","Ñ","O","P","Q","R","S","T","U","V","W","X","Y","Z"];
 let preguntaActual = "";
 let respuestaActual = "";
 let contador = 0;
 let displayPregunta = document.getElementsByClassName("pregunta")[0];
 let displayRespuesta = document.getElementById("respuesta");
-let botonStart = document.getElementById("start");
 let botonResponder = document.getElementById("enviar");
-let errores = 0
+let j = 0
 
-preguntaActual = preguntas[0].pregunta
+preguntaActual = preguntas[contador].pregunta;
 displayPregunta.innerHTML = preguntaActual
+    displayRespuesta.value = ""
 
+botonResponder.addEventListener("click",() =>{
+    Responder()})
 
-
-
-botonResponder.addEventListener("active",() =>{
-    respuestaActual = displayRespuesta.value
-    if(respuestaActual.toUpperCase() === preguntas[contador].respuesta){
-        let circuloLetra = document.getElementById(letras[contador]);
-        circuloLetra.style.backgroundColor = "green"
-        preguntas[contador].solución = "correcta"
-
-        console.log("correcto",contador)
-    }if(respuestaActual.toUpperCase() === "PASAPALABRA"){
-        console.log("pasapalabra", contador)
-    }if(respuestaActual.toUpperCase() !== preguntas[contador].respuesta && respuestaActual.toUpperCase() !== "PASAPALABRA"){
-        let circuloLetra = document.getElementById(letras[contador]);
-        circuloLetra.style.backgroundColor = "red"
-        preguntas[contador].respuesta = "incorrecta"
-        console.log("error", contador)
-    }
-    contador++
+function Responder(){
+        if (contador<=25){
+            console.log(contador, "1")
+        respuestaActual =displayRespuesta.value
+        if(respuestaActual.toUpperCase() === preguntas[contador].respuesta){
+            let circuloLetra = document.getElementById(letras[contador]);
+            circuloLetra.style.backgroundColor = "green"
+            preguntas[contador].solucion = "correcta"
+        }if(respuestaActual.toUpperCase() === "PASAPALABRA"){
+            let circuloLetra = document.getElementById(letras[contador]);
+            circuloLetra.style.backgroundColor = "orange"
+        }if(respuestaActual.toUpperCase() !== preguntas[contador].respuesta && respuestaActual.toUpperCase() !== "PASAPALABRA"){
+            let circuloLetra = document.getElementById(letras[contador]);
+            circuloLetra.style.backgroundColor = "red"
+            preguntas[contador].respuesta = "incorrecta"
+        }
+    contador++    
     preguntaActual = preguntas[contador].pregunta;
     displayPregunta.innerHTML = preguntaActual
     displayRespuesta.value = ""
-    if(contador > 26){
-        contador = 0
-    }    
-})
+    }
+    if(contador >= 26){
+        console.log(contador, "2")
+        console.log(j,"2")
+        for( i = j;i <=26 || preguntas[i].solucion ==="undefined"; i ++){
+            if(respuestaActual.toUpperCase() === preguntas[i].respuesta){
+                let circuloLetra = document.getElementById(letras[i]);
+                circuloLetra.style.backgroundColor = "green"
+                preguntas[i].solucion = "correcta"
+            }if(respuestaActual.toUpperCase() === "PASAPALABRA"){
+                circuloLetra.style.backgroundColor = "orange"
+            }if(respuestaActual.toUpperCase() !== preguntas[i].respuesta && respuestaActual.toUpperCase() !== "PASAPALABRA"){
+                let circuloLetra = document.getElementById(letras[i]);
+                circuloLetra.style.backgroundColor = "red"
+                preguntas[i].respuesta = "incorrecta"
+            } 
+            if(i>26){
+                i=0
+            } 
+            j=i
+            preguntaActual = preguntas[i].pregunta;
+            displayPregunta.innerHTML = preguntaActual
+            displayRespuesta.value = ""
+            return j
+        }
+    }
+    
+};
 

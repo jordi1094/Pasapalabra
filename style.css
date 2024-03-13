@@ -29,7 +29,7 @@ h1{
 }
 .text{
     position: absolute;
-    bottom: 55vh;
+    bottom: 59vh;
     width: 30vw;
     height: 2.5vw;
     font-size: 2vw;
@@ -41,7 +41,7 @@ h1{
     border-radius: 7px;
     margin: auto;
     width: 30.3vw;
-    height: 17vh;
+    height: 22vh;
     
 }
 #respuesta {
@@ -69,7 +69,6 @@ h1{
     color: white;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     border-radius: 7px;
-
 }
 
 #enviar:active{
