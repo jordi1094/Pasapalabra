@@ -42,6 +42,8 @@ h1{
     margin: auto;
     width: 30.3vw;
     height: 22vh;
+    display: flex;
+    align-items: center;
     
 }
 #respuesta {
